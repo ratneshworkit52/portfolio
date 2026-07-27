@@ -44,6 +44,7 @@ body {
   color: var(--text);
   transition: background 0.3s ease, color 0.3s ease;
   position: relative;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body::before {
@@ -68,7 +69,7 @@ a:focus-visible {
 }
 
 .page-shell {
-  max-width: 1180px;
+  width: min(100%, 1400px);
   margin: 0 auto;
   padding: 0 24px 48px;
   position: relative;
@@ -104,10 +105,13 @@ a:focus-visible {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border);
+  padding: 24px 24px;
+  margin: 0 -24px 16px;
+  border: 1px solid var(--border);
+  border-radius: 0 0 24px 24px;
   backdrop-filter: blur(14px);
-  background: rgba(6, 8, 15, 0.92);
+  background: rgba(6, 8, 15, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
 }
 
 [data-theme='light'] .site-header {
@@ -115,8 +119,9 @@ a:focus-visible {
 }
 
 .brand span {
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .brand small {
@@ -325,16 +330,18 @@ a:focus-visible {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.6rem, 4vw, 4rem);
-  line-height: 1.04;
-  max-width: 720px;
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  line-height: 1.02;
+  max-width: 760px;
+  letter-spacing: -0.03em;
 }
 
 .hero-text {
   margin: 28px 0;
-  max-width: 720px;
+  max-width: 760px;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
 .hero-actions {
@@ -408,8 +415,11 @@ a:focus-visible {
 }
 
 .section {
-  padding: 64px 0;
+  padding: 72px 24px;
+  margin: 0 -24px;
   border-top: 1px solid var(--border);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
 }
 
 .accessibility-banner {
@@ -471,6 +481,7 @@ a:focus-visible {
   padding-bottom: 6px;
   border-bottom: 2px solid rgba(93, 124, 255, 0.3);
   width: fit-content;
+  letter-spacing: -0.02em;
 }
 
 .bio-grid,
@@ -497,6 +508,7 @@ a:focus-visible {
   border: 1px solid var(--border);
   box-shadow: 0 8px 24px rgba(10, 14, 26, 0.08);
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  font-size: 0.98rem;
 }
 
 .skill-card:hover,
@@ -579,6 +591,7 @@ a:focus-visible {
   text-align: center;
   color: var(--muted-strong);
   padding: 28px 0 0;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 980px) {
