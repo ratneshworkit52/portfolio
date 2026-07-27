@@ -69,7 +69,7 @@ a:focus-visible {
 }
 
 .page-shell {
-  width: min(100%, 1400px);
+  width: min(100%, 1920px);
   margin: 0 auto;
   padding: 0 24px 48px;
   position: relative;
@@ -110,13 +110,13 @@ a:focus-visible {
   border: 1px solid var(--border);
   border-radius: 0 0 24px 24px;
   backdrop-filter: blur(14px);
-  background: rgba(6, 8, 15, 0.9);
+  /* background: rgba(6, 8, 15, 0.9); */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
 }
 
-[data-theme='light'] .site-header {
+/* [data-theme='light'] .site-header {
   background: rgba(255, 255, 255, 0.95);
-}
+} */
 
 .brand span {
   font-size: 1.12rem;
