@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#1f2a4a" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5d7cff" />
+      <stop offset="100%" stop-color="#72e0ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="36" />
+  <g fill="none" stroke="url(#accent)" stroke-width="18" opacity="0.9">
+    <path d="M180 520C220 340 420 160 620 160s400 170 440 360" stroke-linecap="round" />
+    <path d="M180 250c140-70 300-130 520 0" stroke-linecap="round" />
+  </g>
+  <g fill="#fff">
+    <text x="80" y="210" font-family="Inter, sans-serif" font-size="56" font-weight="700">Ratnesh Shukla</text>
+    <text x="80" y="280" font-family="Inter, sans-serif" font-size="34" font-weight="500">Senior Full-Stack Engineer</text>
+    <text x="80" y="340" font-family="Inter, sans-serif" font-size="28" fill="#c5cfe6">Microfrontend • AI-assisted development • Cloud-native</text>
+  </g>
+  <rect x="80" y="400" width="420" height="160" fill="rgba(93,124,255,0.14)" rx="20" />
+  <text x="120" y="460" font-family="Inter, sans-serif" font-size="26" fill="#fff">Enterprise web applications</text>
+  <text x="120" y="510" font-family="Inter, sans-serif" font-size="24" fill="#c5cfe6">React • Angular • Node.js • AWS</text>
+</svg>
