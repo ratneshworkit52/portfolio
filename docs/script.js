@@ -13,7 +13,7 @@ function applyTheme(theme) {
     themeToggle.setAttribute('aria-pressed', resolvedTheme === 'dark');
     const label = themeToggle.querySelector('.theme-text');
     if (label) {
-      label.textContent = resolvedTheme === 'dark' ? 'Dark' : 'Light';
+      label.textContent = resolvedTheme === 'dark' ? 'Light' : 'Dark';
     }
   }
   localStorage.setItem('theme', resolvedTheme);
