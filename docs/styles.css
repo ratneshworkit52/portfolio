@@ -151,6 +151,9 @@ a:focus-visible {
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--muted);
   font-size: 0.95rem;
   transition: color 0.2s ease;
@@ -162,14 +165,49 @@ a:focus-visible {
   outline: none;
 }
 
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--accent);
+}
+
+.nav-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .nav-toggle {
   display: none;
+  align-items: center;
+  gap: 10px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.08);
   color: var(--text);
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 999px;
   cursor: pointer;
+}
+
+.nav-toggle-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.nav-toggle-icon span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
 }
 
 .theme-toggle {
@@ -500,7 +538,7 @@ a:focus-visible {
 .skill-card,
 .timeline-item,
 .cert-card,
-.education-block,
+.education-card,
 .contact-panel > div {
   padding: 24px;
   border-radius: 22px;
@@ -514,7 +552,7 @@ a:focus-visible {
 .skill-card:hover,
 .timeline-item:hover,
 .cert-card:hover,
-.education-block:hover,
+.education-card:hover,
 .contact-panel > div:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 34px rgba(10, 14, 26, 0.14);
@@ -524,7 +562,7 @@ a:focus-visible {
 .skill-card h3,
 .timeline-item h3,
 .cert-card h3,
-.education-block h3 {
+.education-card h3 {
   margin-top: 0;
 }
 
@@ -535,7 +573,7 @@ a:focus-visible {
 .skill-card p,
 .timeline-item p,
 .cert-card p,
-.education-block p,
+.education-card p,
 .contact-panel p,
 .contact-panel span {
   color: var(--muted);
@@ -572,8 +610,67 @@ a:focus-visible {
   min-height: 120px;
 }
 
-.education-block {
-  grid-column: span 2;
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.education-card {
+  min-height: 220px;
+}
+
+.edu-badge {
+  display: inline-flex;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(93, 124, 255, 0.12);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0 14px;
+}
+
+.logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.logo-pill img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.chip-list span {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-size: 0.86rem;
 }
 
 .contact-panel {
@@ -602,12 +699,9 @@ a:focus-visible {
   .skills-grid,
   .cert-grid,
   .contact-panel,
-  .bio-grid {
+  .bio-grid,
+  .education-grid {
     grid-template-columns: 1fr;
-  }
-
-  .education-block {
-    grid-column: span 1;
   }
 }
 
@@ -621,12 +715,20 @@ a:focus-visible {
     display: none;
     width: 100%;
     flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
     padding: 16px 0 0;
   }
 
   .site-nav.active {
     display: flex;
+  }
+
+  .site-nav a {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
   }
 
   .nav-toggle {

@@ -46,11 +46,12 @@
       </div>
       <div class="header-tools">
         <nav id="site-nav" class="site-nav" role="navigation" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#contact">Contact</a>
+          <a href="#about"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-4v-5H9v5H5a1 1 0 0 1-1-1z" /></svg></span><span>About</span></a>
+          <a href="#skills"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M7 4h10M6 11h12M8 15h8M10 19h4" /></svg></span><span>Skills</span></a>
+          <a href="#experience"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM9 9h6v6H9z" /></svg></span><span>Experience</span></a>
+          <a href="#education"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 3 8l9 4 9-4-9-4Zm-8 6 8 3.5 8-3.5M5 13v4l7 3 7-3v-4" /></svg></span><span>Education</span></a>
+          <a href="#certifications"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4h12l2 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8l2-4Zm3 8h6" /></svg></span><span>Certifications</span></a>
+          <a href="#contact"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h9" /></svg></span><span>Contact</span></a>
         </nav>
         <div class="header-actions">
           <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
@@ -74,7 +75,14 @@
             </span>
             <span class="theme-text">Theme</span>
           </button>
-          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">Menu</button>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="nav-toggle-label">Menu</span>
+          </button>
         </div>
       </div>
     </header>
@@ -232,6 +240,37 @@
         </div>
       </section>
 
+      <section class="section" id="education">
+        <div class="section-header">
+          <span>Education</span>
+          <h2>Academic foundation and continuous growth</h2>
+        </div>
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <div class="edu-badge">Bachelor of Engineering</div>
+            <h3>Information Technology</h3>
+            <p>R.G.P.V. Bhopal, India · 2011</p>
+            <p>Built a strong base in software development, networking, databases, and problem-solving that still shapes my architectural thinking today.</p>
+          </article>
+          <article class="education-card reveal">
+            <h3>Key technologies and keywords</h3>
+            <div class="logo-grid" aria-label="Technology logos">
+              <div class="logo-pill"><img src="assets/logos/angular.svg" alt="Angular logo" /><span>Angular</span></div>
+              <div class="logo-pill"><img src="assets/logos/react.svg" alt="React logo" /><span>React</span></div>
+              <div class="logo-pill"><img src="assets/logos/typescript.svg" alt="TypeScript logo" /><span>TypeScript</span></div>
+              <div class="logo-pill"><img src="assets/logos/nodejs.svg" alt="Node.js logo" /><span>Node.js</span></div>
+              <div class="logo-pill"><img src="assets/logos/aws.svg" alt="AWS logo" /><span>AWS</span></div>
+            </div>
+            <div class="chip-list">
+              <span>Microfrontend</span>
+              <span>Cloud-native</span>
+              <span>AI-assisted delivery</span>
+              <span>Engineering leadership</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="section" id="certifications">
         <div class="section-header">
           <span>Certifications</span>
@@ -250,10 +289,6 @@
           <div class="cert-card reveal">
             <h3>Bronze Badges – Banking and Finance Domain</h3>
           </div>
-        </div>
-        <div class="education-block">
-          <h3>Education</h3>
-          <p>Bachelor of Engineering, Information Technology — R.G.P.V. Bhopal, India | 2011</p>
         </div>
       </section>
 

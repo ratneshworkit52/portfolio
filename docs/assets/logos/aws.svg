@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AWS logo">
+  <rect x="10" y="10" width="44" height="44" rx="12" fill="#FF9900"/>
+  <path d="M22 24h20v16H22z" fill="#fff" opacity="0.95"/>
+  <path d="M26 28h12v8H26z" fill="#FF9900"/>
+  <path d="M20 18h24" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>
