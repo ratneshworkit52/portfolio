@@ -37,11 +37,24 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, rgba(94, 116, 255, 0.18), transparent 28%),
+  background: radial-gradient(circle at top left, rgba(94, 116, 255, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(114, 224, 255, 0.16), transparent 24%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-secondary) 100%);
   background-color: var(--bg);
   color: var(--text);
   transition: background 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.75), transparent 90%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 a {
@@ -58,6 +71,8 @@ a:focus-visible {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px 48px;
+  position: relative;
+  z-index: 1;
 }
 
 .skip-link {
@@ -172,10 +187,47 @@ a:focus-visible {
   box-shadow: 0 0 0 3px rgba(93, 124, 255, 0.18);
 }
 
+.theme-icon-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .theme-icon {
+  position: absolute;
+  inset: 0;
   width: 1.2rem;
   height: 1.2rem;
   color: var(--accent);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.theme-icon-sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-icon-moon {
+  opacity: 0;
+  transform: rotate(-20deg);
+}
+
+[data-theme='light'] .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(30deg);
+}
+
+[data-theme='light'] .theme-icon-moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-text {
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .hero-icon-card {
@@ -187,7 +239,7 @@ a:focus-visible {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
@@ -327,6 +379,13 @@ a:focus-visible {
   border-radius: 22px;
   background: var(--surface);
   backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(10, 14, 26, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-panel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(10, 14, 26, 0.18);
 }
 
 .panel-label {
@@ -408,6 +467,10 @@ a:focus-visible {
 .section-header h2 {
   margin: 0;
   font-size: clamp(2rem, 2.5vw, 2.75rem);
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(93, 124, 255, 0.3);
+  width: fit-content;
 }
 
 .bio-grid,
@@ -432,6 +495,18 @@ a:focus-visible {
   border-radius: 22px;
   background: var(--surface);
   border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(10, 14, 26, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.skill-card:hover,
+.timeline-item:hover,
+.cert-card:hover,
+.education-block:hover,
+.contact-panel > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(10, 14, 26, 0.14);
+  border-color: rgba(93, 124, 255, 0.35);
 }
 
 .skill-card h3,

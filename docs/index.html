@@ -54,20 +54,25 @@
         </nav>
         <div class="header-actions">
           <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
-            <svg viewBox="0 0 24 24" fill="none" class="theme-icon" aria-hidden="true" focusable="false">
-              <circle cx="12" cy="12" r="5.25" fill="currentColor" />
-              <g stroke="currentColor" stroke-width="1.75">
-                <line x1="12" y1="1.5" x2="12" y2="3.75" />
-                <line x1="12" y1="20.25" x2="12" y2="22.5" />
-                <line x1="1.5" y1="12" x2="3.75" y2="12" />
-                <line x1="20.25" y1="12" x2="22.5" y2="12" />
-                <line x1="4.75" y1="4.75" x2="6.5" y2="6.5" />
-                <line x1="17.5" y1="17.5" x2="19.25" y2="19.25" />
-                <line x1="4.75" y1="19.25" x2="6.5" y2="17.5" />
-                <line x1="17.5" y1="6.5" x2="19.25" y2="4.75" />
-              </g>
-            </svg>
-            <span>Theme</span>
+            <span class="theme-icon-group" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" class="theme-icon theme-icon-sun">
+                <circle cx="12" cy="12" r="5.25" fill="currentColor" />
+                <g stroke="currentColor" stroke-width="1.75">
+                  <line x1="12" y1="1.5" x2="12" y2="3.75" />
+                  <line x1="12" y1="20.25" x2="12" y2="22.5" />
+                  <line x1="1.5" y1="12" x2="3.75" y2="12" />
+                  <line x1="20.25" y1="12" x2="22.5" y2="12" />
+                  <line x1="4.75" y1="4.75" x2="6.5" y2="6.5" />
+                  <line x1="17.5" y1="17.5" x2="19.25" y2="19.25" />
+                  <line x1="4.75" y1="19.25" x2="6.5" y2="17.5" />
+                  <line x1="17.5" y1="6.5" x2="19.25" y2="4.75" />
+                </g>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" class="theme-icon theme-icon-moon">
+                <path d="M19 15.2A8.5 8.5 0 1 1 8.8 5 6.75 6.75 0 0 0 19 15.2Z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="theme-text">Theme</span>
           </button>
           <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">Menu</button>
         </div>

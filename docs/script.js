@@ -11,7 +11,7 @@ function applyTheme(theme) {
   document.documentElement.style.colorScheme = resolvedTheme;
   if (themeToggle) {
     themeToggle.setAttribute('aria-pressed', resolvedTheme === 'dark');
-    const label = themeToggle.querySelector('span');
+    const label = themeToggle.querySelector('.theme-text');
     if (label) {
       label.textContent = resolvedTheme === 'dark' ? 'Dark' : 'Light';
     }
