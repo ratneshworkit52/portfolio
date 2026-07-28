@@ -119,16 +119,17 @@ a:focus-visible {
 } */
 
 .brand span {
-  font-size: 1.12rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 .brand small {
   display: block;
-  margin-top: 4px;
-  color: var(--muted-strong);
-  font-size: 0.92rem;
+  color: currentColor;
+  font-size: 0.82rem;
+  text-transform: uppercase;
 }
 
 .header-tools {
@@ -359,16 +360,16 @@ a:focus-visible {
 }
 
 .eyebrow {
-  color: var(--muted-strong);
+  color: currentColor;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  font-size: 0.82rem;
+  font-size: 1.2rem;
   margin-bottom: 18px;
 }
 
-.hero h1 {
+.hero-title {
   margin: 0;
-  font-size: clamp(2.6rem, 4vw, 4.2rem);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
   line-height: 1.02;
   max-width: 760px;
   letter-spacing: -0.03em;
@@ -434,7 +435,7 @@ a:focus-visible {
 }
 
 .panel-label {
-  color: var(--muted-strong);
+  color: currentColor;
   font-size: 0.85rem;
   margin-bottom: 12px;
   text-transform: uppercase;
@@ -506,10 +507,10 @@ a:focus-visible {
 }
 
 .section-header span {
-  color: var(--muted-strong);
+  color: currentColor;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  font-size: 0.82rem;
+  font-size: 1.2rem;
 }
 
 .section-header h2 {
@@ -590,7 +591,7 @@ a:focus-visible {
 
 .timeline-date {
   display: inline-flex;
-  color: var(--muted-strong);
+  color: currentColor;
   font-size: 0.95rem;
   margin-bottom: 14px;
 }
@@ -710,7 +711,7 @@ a:focus-visible {
   border-radius: 999px;
   background: rgba(93, 124, 255, 0.12);
   color: var(--accent);
-  font-size: 0.82rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 14px;
 }
@@ -770,7 +771,7 @@ a:focus-visible {
 
 .site-footer {
   text-align: center;
-  color: var(--muted-strong);
+  color: currentColor;
   padding: 28px 0 0;
   font-size: 0.95rem;
 }
