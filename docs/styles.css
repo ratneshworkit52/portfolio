@@ -627,13 +627,21 @@ a:focus-visible {
   font-size: 1.2rem;
 }
 
-.work-badge {
+.badge-pill,
+.work-badge,
+.edu-badge,
+.logo-pill,
+.chip-list span {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   width: fit-content;
   padding: 7px 10px;
   border-radius: 999px;
   background: rgba(93, 124, 255, 0.12);
   color: var(--accent);
+  border: 1px solid rgba(93, 124, 255, 0.2);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -729,14 +737,9 @@ a:focus-visible {
 }
 
 .edu-badge {
-  display: inline-flex;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: rgba(93, 124, 255, 0.12);
-  color: var(--accent);
-  font-size: 1.2rem;
-  font-weight: 600;
   margin-bottom: 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .logo-grid {
@@ -747,15 +750,13 @@ a:focus-visible {
 }
 
 .logo-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   padding: 10px 12px;
-  border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .logo-pill img {
@@ -772,13 +773,11 @@ a:focus-visible {
 }
 
 .chip-list span {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 10px;
-  border-radius: 999px;
   background: var(--surface-strong);
   color: var(--muted);
   font-size: 0.86rem;
+  text-transform: none;
+  letter-spacing: 0.01em;
 }
 
 .contact-panel {
