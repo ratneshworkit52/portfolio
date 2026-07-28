@@ -876,6 +876,7 @@ a:focus-visible {
   color: var(--accent);
   font-size: 1.1rem;
   flex-shrink: 0;
+  padding: 0.6rem 1rem;
 }
 
 .assistant-shell {
@@ -1058,9 +1059,11 @@ a:focus-visible {
   .cert-card img {
     max-width: 140px;
   }
-}
 
-@media (max-width: 760px) {
+  .theme-text {
+    display: none;
+  }
+
   .site-header {
     flex-wrap: wrap;
     padding: 20px 0;
@@ -1108,5 +1111,30 @@ a:focus-visible {
 
   .assistant-form {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header-tools {
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 90%;
   }
 }
