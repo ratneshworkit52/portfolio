@@ -194,14 +194,12 @@ a:focus-visible {
   color: var(--accent);
 }
 
-.nav-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.75;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.nav-icon i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: currentColor;
 }
 
 .nav-toggle {
@@ -262,8 +260,12 @@ a:focus-visible {
 .theme-icon {
   position: absolute;
   inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 1.2rem;
   height: 1.2rem;
+  font-size: 1rem;
   color: var(--accent);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
@@ -334,31 +336,14 @@ a:focus-visible {
 }
 
 .icon-svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
+  font-size: 1.8rem;
   color: var(--accent);
   animation: float 6s ease-in-out infinite;
-}
-
-.icon-svg path,
-.icon-svg circle,
-.icon-svg line,
-.access-icon svg path,
-.access-icon svg circle,
-.access-icon svg line {
-  stroke: currentColor;
-  fill: none;
-}
-
-.icon-path path:first-child {
-  fill: none;
-  stroke: var(--accent-soft);
-  stroke-width: 2;
-  opacity: 0.4;
-}
-
-.icon-path path:last-child {
-  stroke: var(--accent);
 }
 
 @keyframes float {
@@ -506,9 +491,8 @@ a:focus-visible {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.access-icon svg {
-  width: 36px;
-  height: 36px;
+.access-icon i {
+  font-size: 1.8rem;
   color: var(--accent);
   animation: pulse 3s ease-in-out infinite;
 }
@@ -758,12 +742,9 @@ a:focus-visible {
   padding: 12px;
 }
 
-.cert-card img {
-  width: 100%;
-  max-width: 120px;
-  height: auto;
-  border-radius: 14px;
-  object-fit: contain;
+.cert-card i {
+  font-size: 3rem;
+  color: var(--accent);
 }
 
 .cert-content h3 {
@@ -810,10 +791,9 @@ a:focus-visible {
   text-transform: none;
 }
 
-.logo-pill img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+.logo-pill i {
+  font-size: 1rem;
+  color: var(--accent);
 }
 
 .chip-list {
@@ -876,7 +856,11 @@ a:focus-visible {
   color: var(--accent);
   font-size: 1.1rem;
   flex-shrink: 0;
-  padding: 0.6rem 1rem;
+  padding: 0;
+}
+
+.contact-icon i {
+  font-size: 1.1rem;
 }
 
 .assistant-shell {
